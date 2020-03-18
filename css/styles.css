@@ -1,0 +1,101 @@
+* {
+    padding: 0%;
+    margin: 0px;
+}
+
+body {
+    background-color: white;
+}
+
+.logo-gradiweb {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 0px 0px;
+}
+
+.contenedor {
+    margin: 40px auto 0px auto;
+    max-width: 1000px;
+}
+
+.contenedor .item-img {
+    cursor: pointer;
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+    margin-bottom: -40px;
+}
+
+.item-img {
+    position: relative;
+}
+
+.item-img * {
+    width: 100%;
+    /*Transformamos la imagen geometricamente*/
+    clip-path: polygon(0% 35%, 100% 0%, 100% 65%, 0% 100%);
+}
+
+.item-img:hover * {
+    width: 100%;
+    clip-path: polygon(0% 18%, 100% 0%, 100% 82%, 0% 100%);
+    height: 300px;
+}
+
+.item-img::after {
+    background-color: #00D664;
+    background-image: url("../assets/img/logo-white.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    clip-path: polygon(0% 18%, 100% 0%, 100% 82%, 0% 100%);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.item-img:hover::after {
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    transition: all 0.5s;
+}
+
+.id {
+    /*color: #000;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    display: none;
+    z-index: 10;*/
+    display: none;
+    font-size: 1.5em;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: red;
+}
+
+.id:hover {
+    display: block;
+}
+
+
+/*
+.id::before {
+    content: "";
+    display: block;
+}
+
+.id:hover::before {
+    display: block;
+}
+*/
